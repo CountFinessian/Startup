@@ -15,3 +15,5 @@ Elevator Pitch: Imagine a world of trading without the hassle of using your own 
 http://3.15.54.213
 ssh -i ~/CS260/1220.pem ubuntu@3.15.54.213
 That's it, I have officially created a website. Initially, I couldn't figured out how to get into my website. It said [blank] sent an invalid response. After, consulting discord, I found someone else experiencing the same "Issue was I was typing in https://, it wasn't working, but when I do http:// it does work."
+http://startup260.click
+I am driving my own website name! It took a while for my website request to stop pending. The proccess of tying my website name to my ip address was easy. 
