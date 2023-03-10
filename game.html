@@ -44,10 +44,10 @@
     <label for="Name">Price:</label>
     <input type="text" id="text2" placeholder="Enter Number Shares">
  
-<input type ="button" id = "btn1" value="BUY">
+<input type ="button" id = "btn1" value="BUY" onclick="fun1()">
 <button id ="btn2" onclick="fn2()">Sell</button>
 <p class="output" id ="output1"></p>
-</article>
+  </article>
 
     <li><strong>Jan 03, 2023</strong> - 118.47	118.80	104.64	108.10	108.10	231,402,800</li>
     <li><strong>Jan 04, 2023</strong> - 109.11	114.59	107.52	113.64	113.64	180,389,000</li>
@@ -80,6 +80,8 @@
       const out1 = document.getElementBYID('output1');
       
       function fun1(){
+        var str = document.getElementById("tbuser").value;
+        window.alert("value inside box" + str);
         out1.innerHTML = txt1.value;
       }
 
