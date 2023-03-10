@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" >
 
+
 <head>
   <meta charset="UTF-8">
   <title>Jacob Williams Tribute</title>
@@ -8,11 +9,11 @@
   <span class="player-name"></span>
       </div>
   
-  
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Sunflower:300'>
 <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
 
       <link rel="stylesheet" href="css/style.css">
+ 
 
   
 </head>
@@ -37,13 +38,13 @@
   <h3 class="text-center">Interactive Stock Prices</h3>
   <ul class="verticalLine">
     <label for="Name">Ticker:</label>
-    <input type="text" id="Ticker" name="Ticker" placeholder="Enter Ticker Symbol">
+    <input id="text1"  placeholder="Enter Ticker Symbol">
     <label for="Name">Price:</label>
-    <input type="text" id="Price" name="Price" placeholder="Enter Number Shares">
+    <input type="text" id="text2" placeholder="Enter Number Shares">
     <!DOCTYPE html>
 <body>
-<button type="button" onclick="alert('This did nothing')">Buy</button>
-<button type="button" onclick="alert('This did something')">Sell</button>
+<button  onclick="fn1()" id = "btn1">Buy</button>
+<button id ="btn2" onclick="fn2()">Sell</button>
 </body>
     <li><strong>Jan 03, 2023</strong> - 118.47	118.80	104.64	108.10	108.10	231,402,800</li>
     <li><strong>Jan 04, 2023</strong> - 109.11	114.59	107.52	113.64	113.64	180,389,000</li>
@@ -70,7 +71,14 @@
   </div>
   <p class="center-block text-center divider" id="bottom-divider">Written and Coded by <a href="https://github.com/CountFinessian/Startup.git">Jacob Williams</a></p>
 </div>
-    <script  src="js/index.js"></script>
+    <script  src="js/index.js">
+      function fn1()
+      {
+        var str = document.getElementById("text1").value;
+        alert("Value inside the text box is: "+str);
+
+      }
+    </script>
 
 
 
