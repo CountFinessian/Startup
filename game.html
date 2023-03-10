@@ -37,15 +37,18 @@
   <img class="center-block smaller-image" src="assets/iwata.png" alt="Stock Market Game">
   <h3 class="text-center">Interactive Stock Prices</h3>
   <ul class="verticalLine">
-    <label for="Name">Ticker:</label>
-    <input id="text1"  placeholder="Enter Ticker Symbol">
+    <article class = "regular">
+      <h2>  Textbox </h2>
+    <label for="tbuser">Username:</label>
+    <input type="text" id="tbuser"  placeholder="Enter Ticker Symbol">
     <label for="Name">Price:</label>
     <input type="text" id="text2" placeholder="Enter Number Shares">
-    <!DOCTYPE html>
-<body>
-<button  onclick="fn1()" id = "btn1">Buy</button>
+ 
+<input type ="button" id = "btn1" value="BUY">
 <button id ="btn2" onclick="fn2()">Sell</button>
-</body>
+<p class="output" id ="output1"></p>
+</article>
+
     <li><strong>Jan 03, 2023</strong> - 118.47	118.80	104.64	108.10	108.10	231,402,800</li>
     <li><strong>Jan 04, 2023</strong> - 109.11	114.59	107.52	113.64	113.64	180,389,000</li>
     <li><strong>Jan 05, 2023</strong> - 110.51	111.75	107.16	110.34	110.34	157,986,300</li>
@@ -71,13 +74,16 @@
   </div>
   <p class="center-block text-center divider" id="bottom-divider">Written and Coded by <a href="https://github.com/CountFinessian/Startup.git">Jacob Williams</a></p>
 </div>
-    <script  src="js/index.js">
-      function fn1()
-      {
-        var str = document.getElementById("text1").value;
-        alert("Value inside the text box is: "+str);
-
+    <script>
+      const txt1 = document.getElementByID('tbuser');
+      const btn1 = document.getElementBYID('btn1');
+      const out1 = document.getElementBYID('output1');
+      
+      function fun1(){
+        out1.innerHTML = txt1.value;
       }
+
+      btn1.addEventListener('click',fun1);
     </script>
 
 
