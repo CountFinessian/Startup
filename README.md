@@ -35,3 +35,21 @@ I have updated my website to https instead of http so now it is secured. The pro
 (3/1) Promises in JS are weird, factually, the examples exhibit them in random probabillity events. The three values of pending, fulfilled, and rejected represent the reserved state of the promise. Async/await syntax resolves the verbose promise within a promise and is interpreter sugar. It makes things wait so that everything outputes at the same time. The rule for using await is a top level module function or called from an async function.
 (3/2) The interactivity of Javascript never ceases to blow me away. The abillity to save a user's entry into the website then updates the scorebaord too is pretty cool. I need to be implimenting these technology into my startup as I learn them. I love how they mesh to form a cohesive whole that seems to work just right. 
 (3/10) This is awfully emberassing, but I haven't updated my github in the longest time. As of now, I'm working on my Javascript Startup deliverable. I learned how to make a name stick into the webpage and also a some user input on the button click, now I need to learn how to call the javascript into the actual page itself in a graph and call the code in index.js. The idea behind this is making an await and an promise fufillment center in stock buys to make the process rockier than it should.
+<li><strong>Jan 04, 2023</strong> - 109.11	114.59	107.52	113.64	113.64	180,389,000</li>
+    <li><strong>Jan 05, 2023</strong> - 110.51	111.75	107.16	110.34	110.34	157,986,300</li>
+    <li><strong>Jan 06, 2023</strong> - 103.00	114.39	101.81	113.06	113.06	220,575,900</li>
+    <li><strong>Jan 09, 2023</strong> - 118.96	123.52	117.11	119.77	119.77	190,284,000</li>
+    <li><strong>Jan 10, 2023</strong> - 121.07	122.76	114.92	118.85	118.85	167,642,500</li>
+    <li><strong>Jan 11, 2023</strong> - 122.09	125.95	120.51	123.22	123.22	183,810,800</li>
+    <li><strong>Jan 12, 2023</strong> - 122.56	124.13	117.00	123.56	123.56	169,400,900</li>
+    <li><strong>Jan 13, 2023</strong> - 116.55	122.63	115.60	122.40	122.40	180,439,300</li>
+    <li><strong>Jan 17, 2023</strong> - 125.70	131.70	125.02	131.49	131.49	186,477,000</li>
+    <li><strong>Jan 18, 2023</strong> - 136.56	136.68	127.01	128.78	128.78	195,680,300</li>
+    <li><strong>Jan 20, 2023</strong> - 128.68	133.51	127.35	133.42	133.42	138,429,900</li>
+    <li><strong>Jan 23, 2023</strong> - 135.87	145.38	134.27	143.75	143.75	203,119,200</li>
+    <li><strong>Jan 24, 2023</strong> - 143.00	146.50	141.10	143.89	143.89	158,699,100</li>
+    <li><strong>Jan 25, 2023</strong> - 141.91	146.41	138.07	144.43	144.43	192,734,300</li>
+    <li><strong>Jan 26, 2023</strong> - 159.97	161.42	154.76	160.27	160.27	234,815,100</li>
+    <li><strong>Jan 27, 2023</strong> - 162.43	180.68	161.17	177.90	177.90	305,632,100</li>
+    <li><strong>Jan 30, 2023</strong> - 178.05	179.77	166.50	166.66	166.66	230,878,800</li>
+    <li><strong>Jan 31, 2023</strong> - 164.57	174.30	162.78	173.22	173.22	196,813,500</li>
