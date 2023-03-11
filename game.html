@@ -38,7 +38,7 @@
   <h3 class="text-center">Interactive Stock Prices</h3>
   <ul class="verticalLine">
     <article class = "regular">
-      <h2>  Textbox </h2>
+      <h2 id = "changer" >Textbox</h2>  
     <label for="tbuser">Username:</label>
     <input type="text" id="tbuser"  placeholder="Enter Ticker Symbol">
     <label for="Name">Price:</label>
@@ -78,11 +78,13 @@
       const txt1 = document.getElementByID('tbuser');
       const btn1 = document.getElementBYID('btn1');
       const out1 = document.getElementBYID('output1');
+      const chan = document.getElementBYID('changer');
       
       function fun1(){
         var str = document.getElementById("tbuser").value;
+        document.getElementById("changer").innerHTML = str;
         window.alert("value inside box" + str);
-        out1.innerHTML = txt1.value;
+        out1.innerHTML = str;
       }
 
       btn1.addEventListener('click',fun1);
