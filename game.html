@@ -38,61 +38,25 @@
   <h3 class="text-center">Interactive Stock Prices</h3>
   <ul class="verticalLine">
     <article class = "regular">
-      <h2 id = "changer" >Textbox</h2>  
-    <label for="tbuser">Username:</label>
-    <input type="text" id="tbuser"  placeholder="Enter Ticker Symbol">
+     
+    <input type="text" id="symbo"  placeholder="Enter Ticker Symbol">
     <label for="Name">Price:</label>
-    <input type="text" id="text2" placeholder="Enter Number Shares">
+    <input type="text" id="quant" placeholder="Enter Number Shares">
  
 <input type ="button" id = "btn1" value="BUY" onclick="fun1()">
-<button id ="btn2" onclick="fn2()">Sell</button>
+<button id ="btn2" onclick="fun2()">SELL</button>
 <p class="output" id ="output1"></p>
   </article>
-
-    <li><strong>Jan 03, 2023</strong> - 118.47	118.80	104.64	108.10	108.10	231,402,800</li>
-    <li><strong>Jan 04, 2023</strong> - 109.11	114.59	107.52	113.64	113.64	180,389,000</li>
-    <li><strong>Jan 05, 2023</strong> - 110.51	111.75	107.16	110.34	110.34	157,986,300</li>
-    <li><strong>Jan 06, 2023</strong> - 103.00	114.39	101.81	113.06	113.06	220,575,900</li>
-    <li><strong>Jan 09, 2023</strong> - 118.96	123.52	117.11	119.77	119.77	190,284,000</li>
-    <li><strong>Jan 10, 2023</strong> - 121.07	122.76	114.92	118.85	118.85	167,642,500</li>
-    <li><strong>Jan 11, 2023</strong> - 122.09	125.95	120.51	123.22	123.22	183,810,800</li>
-    <li><strong>Jan 12, 2023</strong> - 122.56	124.13	117.00	123.56	123.56	169,400,900</li>
-    <li><strong>Jan 13, 2023</strong> - 116.55	122.63	115.60	122.40	122.40	180,439,300</li>
-    <li><strong>Jan 17, 2023</strong> - 125.70	131.70	125.02	131.49	131.49	186,477,000</li>
-    <li><strong>Jan 18, 2023</strong> - 136.56	136.68	127.01	128.78	128.78	195,680,300</li>
-    <li><strong>Jan 20, 2023</strong> - 128.68	133.51	127.35	133.42	133.42	138,429,900</li>
-    <li><strong>Jan 23, 2023</strong> - 135.87	145.38	134.27	143.75	143.75	203,119,200</li>
-    <li><strong>Jan 24, 2023</strong> - 143.00	146.50	141.10	143.89	143.89	158,699,100</li>
-    <li><strong>Jan 25, 2023</strong> - 141.91	146.41	138.07	144.43	144.43	192,734,300</li>
-    <li><strong>Jan 26, 2023</strong> - 159.97	161.42	154.76	160.27	160.27	234,815,100</li>
-    <li><strong>Jan 27, 2023</strong> - 162.43	180.68	161.17	177.90	177.90	305,632,100</li>
-    <li><strong>Jan 30, 2023</strong> - 178.05	179.77	166.50	166.66	166.66	230,878,800</li>
-    <li><strong>Jan 31, 2023</strong> - 164.57	174.30	162.78	173.22	173.22	196,813,500</li>
+ 
+    <li2 id = "changer" ></li2>
+    
   </ul>
     <h3 class="text-center quote"><em>“Someone's sitting in the shade today because someone planted a tree a long time ago.” -Warren Buffet</em></h3>
   
   </div>
   <p class="center-block text-center divider" id="bottom-divider">Written and Coded by <a href="https://github.com/CountFinessian/Startup.git">Jacob Williams</a></p>
 </div>
-    <script>
-      const txt1 = document.getElementByID('tbuser');
-      const btn1 = document.getElementBYID('btn1');
-      const out1 = document.getElementBYID('output1');
-      const chan = document.getElementBYID('changer');
-      
-      function fun1(){
-        var str = document.getElementById("tbuser").value;
-        document.getElementById("changer").innerHTML = str;
-        window.alert("value inside box" + str);
-        out1.innerHTML = str;
-      }
-
-      btn1.addEventListener('click',fun1);
-    </script>
-
-
-
-
+<script src="js/index.js"></script>
 </body>
 
 </html>

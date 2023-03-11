@@ -1,6 +1,7 @@
 
   
   
+
   class Game {
     constructor() {
       const playerNameEl = document.querySelector('.player-name');
@@ -16,10 +17,27 @@
 
       }
   }
-  
   const game = new Game();
   
   
+  function fun1(){
+    var ticker = document.getElementById("symbo").value;
+    var now = new Date();
+    var Buy = "Bought";
+    var Bought = Buy.fontcolor("green");
+    
+    var number = document.getElementById("quant").value;
+    document.getElementById("changer").innerHTML += (Bought + " " + number + " shares of " + ticker + " on " + now + "<br>");
+  }
+  function fun2(){
+    var ticker = document.getElementById("symbo").value;
+    var now = new Date();
+    var sell = "Sold";
+    var sold = sell.fontcolor("red");
+    var number = document.getElementById("quant").value;
+    document.getElementById("changer").innerHTML += (sold + " " + number + " shares of " + ticker + " on " + now + "<br>");
+  }
+
   
   
   
