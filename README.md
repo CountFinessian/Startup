@@ -54,3 +54,4 @@ I have updated my website to https instead of http so now it is secured. The pro
     <li><strong>Jan 30, 2023</strong> - 178.05	179.77	166.50	166.66	166.66	230,878,800</li>
     <li><strong>Jan 31, 2023</strong> - 164.57	174.30	162.78	173.22	173.22	196,813,500</li>
 (3/12) The world of fetch, node.js, npm, and API makes my head whirl. After I understand this world, I'm for the ability find get a stock quote given a ticker smybol. Upon searching NPM, I've found something, but I'm getting a 0 crum error. (https://www.npmjs.com/package/yahoo-finance).
+(3/15) My code hosts a local server on 8080 and when a type http://localhost:8080/ on my latop, it gets "Hello World!" I couldn't figure out determinants in 213 nor NPM's in 260, so I'll learn them tommrow. The compatibillity of the software is amazing and opens up a whole world of opprotunity if I can just get it to work. 
