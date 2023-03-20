@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 
 <head>
@@ -7,56 +7,59 @@
   <title>Jacob Williams Tribute</title>
   Player:
   <span class="player-name"></span>
-      </div>
-  
+  </div>
+
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Sunflower:300'>
-<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch'
+    href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
 
-      <link rel="stylesheet" href="css/style.css">
- 
+  <link rel="stylesheet" href="css/style.css">
 
-  
+
+
 </head>
 
 <body>
-  
+
   <div class="container-fluid">
-  <div id="infobox">
-    <div class="text-center header">
-  <p id="title1">Stock Market Game <img class="center-block" id="stonk" src="assets/stonks.png" alt="Tesla Stock"></p>
-    <p id="title2">$TSLA$</p>
-      <p id="title3">2020-2023</p>
-      
+    <div id="infobox">
+      <div class="text-center header">
+        <p id="title1">Stock Market Game <img class="center-block" id="stonk" src="assets/stonks.png" alt="Tesla Stock">
+        </p>
+        <p id="title2">$TSLA$</p>
+        <p id="title3">2020-2023</p>
+
+      </div>
+      <h3 class="center-block divider" </h3>
+        <h3 class="text-center quote"><em>"Imagine a world of trading without the hassle of using your own money.
+            Battle against your friends in a 1 on 1 simulation to see who can generate the most alpha.
+            RAFT will utilize the Yahoo Finance API and and Websockets to communicate and compare performance metrics
+            peer to peer.
+            The game will be barebones in design, featuring a buy and sell button and trader's gut instinct.
+            Do you think you have what it takes to come out on top?"</em></h3>
+        <img class="center-block smaller-image" src="assets/iwata.png" alt="Stock Market Game">
+        <h3 class="text-center">Interactive Stock Prices</h3>
+          <article class="regular">
+
+            <input type="text" id="symbo" placeholder="Enter Ticker Symbol">
+            <label for="Name">Price:</label>
+            <input type="text" id="quant" placeholder="Enter Number Shares">
+
+            <input type="button" id="btn1" value="BUY" onclick="fun1()">
+            <button id="btn2" onclick="fun2()">SELL</button>
+            <p class="output" id="output1"></p>
+          </article>
+
+          <div id="changer"></div>
+
+        <h3 class="text-center quote"><em>“Someone's sitting in the shade today because someone planted a tree a long
+            time ago.” -Warren Buffet</em></h3>
+
     </div>
-    <h3 class="center-block divider"</h3>
-  <h3 class="text-center quote"><em>"Imagine a world of trading without the hassle of using your own money. 
-    Battle against your friends in a 1 on 1 simulation to see who can generate the most alpha. 
-    RAFT will utilize the Yahoo Finance API and and Websockets to communicate and compare performance metrics peer to peer. 
-    The game will be barebones in design, featuring a buy and sell button and trader's gut instinct. 
-    Do you think you have what it takes to come out on top?"</em></h3>
-  <img class="center-block smaller-image" src="assets/iwata.png" alt="Stock Market Game">
-  <h3 class="text-center">Interactive Stock Prices</h3>
-  <ul class="verticalLine">
-    <article class = "regular">
-     
-    <input type="text" id="symbo"  placeholder="Enter Ticker Symbol">
-    <label for="Name">Price:</label>
-    <input type="text" id="quant" placeholder="Enter Number Shares">
- 
-<input type ="button" id = "btn1" value="BUY" onclick="fun1()">
-<button id ="btn2" onclick="fun2()">SELL</button>
-<p class="output" id ="output1"></p>
-  </article>
- 
-    <li2 id = "changer" ></li2>
-    
-  </ul>
-    <h3 class="text-center quote"><em>“Someone's sitting in the shade today because someone planted a tree a long time ago.” -Warren Buffet</em></h3>
-  
+    <p class="center-block text-center divider" id="bottom-divider">Written and Coded by <a
+        href="https://github.com/CountFinessian/Startup.git">Jacob Williams</a></p>
   </div>
-  <p class="center-block text-center divider" id="bottom-divider">Written and Coded by <a href="https://github.com/CountFinessian/Startup.git">Jacob Williams</a></p>
-</div>
-<script src="js/index.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>
