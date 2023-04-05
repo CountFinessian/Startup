@@ -10,14 +10,55 @@ class Game {
   getPlayerName() {
     return localStorage.getItem('userName') ?? 'Mystery player';
   }
-  fn1() {
-    var str = document.getElementById("text1").value;
-    alert("Value inside the text box is: " + str);
-
+    async saveScore(score) {
+      const userName = this.getPlayerName();
+      const date = new Date().toLocaleDateString();
+      const newScore = { name: userName, score: score, date: date };
+    
+      try {
+        const response = await fetch('/api/score', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify(newScore),
+        });
+    
+        // Store what the service gave us as the high scores
+        const scores = await response.json();
+        localStorage.setItem('scores', JSON.stringify(scores));
+      } catch {
+        // If there was an error then just track scores locally
+        this.updateScoresLocal(newScore);
+      }
+    }
+    
+    updateScoresLocal(newScore) {
+      let scores = [];
+      const scoresText = localStorage.getItem('scores');
+      if (scoresText) {
+        scores = JSON.parse(scoresText);
+      }
+    
+      let found = false;
+      for (const [i, prevScore] of scores.entries()) {
+        if (newScore > prevScore.score) {
+          scores.splice(i, 0, newScore);
+          found = true;
+          break;
+        }
+      }
+    
+      if (!found) {
+        scores.push(newScore);
+      }
+    
+      if (scores.length > 10) {
+        scores.length = 10;
+      }
+    
+      localStorage.setItem('scores', JSON.stringify(scores));
+    }
   }
-}
 const game = new Game();
-
 
 function fun3(ticker) {
 
@@ -45,25 +86,30 @@ function fun1() {
       const containerEl = document.querySelector('#buy');
 
       containerEl.textContent = `Bought ${number*data.price} dollars of ${data.ticker} on ${now}`
+      game.saveScore(number*data.price);
     });
 
 }
-function fun2() {
-  var ticker = document.getElementById("symbo").value;
-  var now = new Date();
-  var sell = "Sold";
-  var sold = sell.fontcolor("red");
-  var number = document.getElementById("quant").value;
+function fun2(game) {
+  // var ticker = document.getElementById("symbo").value;
+  // var now = new Date();
+  // var sell = "Sold";
+  // var sold = sell.fontcolor("red");
+  // var number = document.getElementById("quant").value;
 
-  fetch(`/api/stock/${ticker}`)
-    .then((response) => response.json())
-    .then((data) => {
-      const containerEl = document.querySelector('#sell');
+  // fetch(`/api/stock/${ticker}`)
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     const containerEl = document.querySelector('#sell');
       
-      containerEl.textContent = `Sold ${number*data.price} dollars of ${data.ticker} on ${now}`
-    });
+  //     containerEl.textContent = `Sold ${number*data.price} dollars of ${data.ticker} on ${now}`
+  //   });
   // document.getElementById("changer").innerHTML += (sold + " " + number*price + " dollars of " + ticker + " on " + now + "<br>");
- }
+  game.saveScore(8);
+  
+}
+
+
 
 //  const containerEl = document.querySelector('#changer');
 //  containerEl.insertAdjacentElement('afterend', '<p>This is a <span id="bigboy">green</span> word in a paragraph.</p>');
@@ -94,3 +140,6 @@ function fun2() {
   //     quantEl.style.color = "green"
   //     document.getElementById("changer").innerHTML += ("Bought " + quantEl.value + " dollars of " + stockPrice + " on " + now + "<br>");
   //   })
+
+  
+  
