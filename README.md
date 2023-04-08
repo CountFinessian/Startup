@@ -65,3 +65,9 @@ I learned how to setup mongoDB and insert my database link into the code. It's s
 (4/5) I learned you must store your environment variables individually in order to get the MongoDB database to function instead of posting the url into the const url script. I also learned that you can create service endpoints so that the functions are called and run on the back end instead of the user's machine which may have the chance of blocking them. It is an interacate proccess in which I am slowly learning the secrets behind.
 (4/7)My favorite part about React is how modular in design it is. It is scalable and allows me to make my website look like an animation instead of a still. I do not know how it does this sort of majig. For example in the future I will be able to push different html links all inside of one html link. So I will have all inclusive routing all while staying in one page. This means everything gets loaded in without having to move and it just injects.
 React allows us to do many different things while inside of the website.  Mainly, it allows us to route and plug and play many different html subscripts into one central area so that the user experience is rather seamless. Messing around with React has made me appreciate has easy it has become to create a cool front end user interface. 
+Error: ENOENT: no such file or directory, stat '/home/ubuntu/services/simon/public/index.html'
+git clone https://github.com/webprogramming260/simon-react.git
+cd simon-react
+npm install create-react-app
+npm run build
+./deployReact.sh -k ~/keys/production.pem -h yourdomain.click -s simon
