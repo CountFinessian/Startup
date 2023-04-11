@@ -26,12 +26,11 @@ function displayQuote(data) {
     });
 }
 
-
 async function loadScores() {
   let scores = [];
   try {
-    // Get the latest high scores from the service
-    const response = await fetch('/api/scores');
+    // Get all scores from the service
+    const response = await fetch('/api/scores/all');
     scores = await response.json();
 
     // Save the scores in case we go offline in the future
@@ -43,14 +42,22 @@ async function loadScores() {
       scores = JSON.parse(scoresText);
     }
   }
-
-  displayScores(scores);
+  const name = this.getPlayerName();
+  displayScores(scores, name);
+}
+function getPlayerName() {
+  return localStorage.getItem('userName') ?? 'Mystery player';
 }
 
-function displayScores(scores) {
+function displayScores(scores, nameFilter) {
   const tableBodyEl = document.querySelector('#scores');
 
   if (scores.length) {
+    // Filter the scores for the specified name
+    if (nameFilter) {
+      scores = scores.filter((score) => score.name === nameFilter);
+    }
+
     // Update the DOM with the scores
     for (const [i, score] of scores.entries()) {
       const positionTdEl = document.createElement('td');
@@ -72,11 +79,12 @@ function displayScores(scores) {
       tableBodyEl.appendChild(rowEl);
     }
   } else {
-    tableBodyEl.innerHTML = '<tr><td colSpan=4>Be the first to score</td></tr>';
+    tableBodyEl.innerHTML = '<tr><td colSpan=4>Buy your first stock</td></tr>';
   }
 }
 
-loadScores();
+
+
 displayPicture();
 displayQuote();
-
+loadScores();

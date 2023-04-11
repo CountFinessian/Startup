@@ -40,7 +40,7 @@ async function loginOrCreate(endpoint) {
 
   if (response?.status === 200) {
     localStorage.setItem('userName', userName);
-    window.location.href = 'game.html';
+    window.location.href = 'play.html';
   } else {
     const modalEl = document.querySelector('#msgModal');
     modalEl.querySelector('.modal-body').textContent = `⚠ Error: ${body.msg}`;
@@ -60,7 +60,6 @@ function logout() {
 }
 
 async function getUser(email) {
-  let scores = [];
   // See if we have a user with the given email.
   const response = await fetch(`/api/user/${email}`);
   if (response.status === 200) {
@@ -76,4 +75,3 @@ function setDisplay(controlId, display) {
     playControlEl.style.display = display;
   }
 }
-

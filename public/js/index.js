@@ -10,18 +10,23 @@ class Game {
   getPlayerName() {
     return localStorage.getItem('userName') ?? 'Mystery player';
   }
-    async saveScore(score) {
+    async saveScore(score, ticker) {
       const userName = this.getPlayerName();
       const date = new Date().toLocaleDateString();
       const newScore = { name: userName, score: score, date: date };
     
+      // try {
+      //   const response = await fetch('/api/score/${name}', {
+      //     method: 'POST',
+      //     headers: { 'content-type': 'application/json' },
+      //     body: JSON.stringify(newScore),
+      //   });
       try {
         const response = await fetch('/api/score', {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify(newScore),
         });
-    
         // Store what the service gave us as the high scores
         const scores = await response.json();
         localStorage.setItem('scores', JSON.stringify(scores));
@@ -62,16 +67,17 @@ const game = new Game();
 
 function fun3(ticker) {
 
-  fetch(`https://query1.finance.yahoo.com/v11/finance/quoteSummary/${ticker}?modules=financialData`)
-    .then((httpResult) => httpResult.json())
-    .then((stockData) => {
-      const stockPrice = stockData.quoteSummary.result[0].financialData.currentPrice.raw;
+  // fetch(`https://query1.finance.yahoo.com/v11/finance/quoteSummary/${ticker}?modules=financialData`)
+  //   .then((httpResult) => httpResult.json())
+  //   .then((stockData) => {
+  //     const stockPrice = stockData.quoteSummary.result[0].financialData.currentPrice.raw;
 
-      return stockPrice;
-    });
-    
+  //     return stockPrice;
+  //   });
+  
+    window.location.href = 'about.html';
+  }
 
-}
 
 function fun1() {
   var ticker = document.getElementById("symbo").value;
@@ -86,30 +92,26 @@ function fun1() {
       const containerEl = document.querySelector('#buy');
 
       containerEl.textContent = `Bought ${number*data.price} dollars of ${data.ticker} on ${now}`
-      game.saveScore(number*data.price);
+      game.saveScore(data.price, data.ticker);
     });
 
 }
 function fun2(game) {
-  // var ticker = document.getElementById("symbo").value;
-  // var now = new Date();
-  // var sell = "Sold";
-  // var sold = sell.fontcolor("red");
-  // var number = document.getElementById("quant").value;
+  var ticker = document.getElementById("symbo").value;
+  var now = new Date();
+  var sell = "Sold";
+  var sold = sell.fontcolor("red");
+  var number = document.getElementById("quant").value;
 
-  // fetch(`/api/stock/${ticker}`)
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     const containerEl = document.querySelector('#sell');
+  fetch(`/api/stock/${ticker}`)
+    .then((response) => response.json())
+    .then((data) => {
+      const containerEl = document.querySelector('#sell');
       
-  //     containerEl.textContent = `Sold ${number*data.price} dollars of ${data.ticker} on ${now}`
-  //   });
-  // document.getElementById("changer").innerHTML += (sold + " " + number*price + " dollars of " + ticker + " on " + now + "<br>");
-  game.saveScore(8);
-  
+      containerEl.textContent = `Sold ${number*data.price} NOT IMPLIMENTED ${data.ticker} on ${now}`
+      // game.saveScore(data.price, data.ticker);
+    });
 }
-
-
 
 //  const containerEl = document.querySelector('#changer');
 //  containerEl.insertAdjacentElement('afterend', '<p>This is a <span id="bigboy">green</span> word in a paragraph.</p>');
