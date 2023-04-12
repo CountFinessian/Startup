@@ -13,7 +13,7 @@ class Game {
     async saveScore(score, ticker) {
       const userName = this.getPlayerName();
       const date = new Date().toLocaleDateString();
-      const newScore = { name: userName, score: score, date: date };
+      const newScore = { name: userName, score: ticker, date: score};
     
       // try {
       //   const response = await fetch('/api/score/${name}', {
