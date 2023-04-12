@@ -1,10 +1,3 @@
-# simon-websocket
-
-<<<<<<< HEAD
-This deliverable demonstrates peer to peer communication using WebSocket.
-=======
-
-
 I think I finally figure out page break
 
 Elevator Pitch: Imagine a world of trading without the hassle of using your own money. Battle against your friends in a 1 on 1 simulation to see who can generate the most alpha. RAFT will utilize the Yahoo Finance API and and Websockets to communicate and compare performance metrics peer to peer. The game will be barebones in design, featuring a buy and sell button and trader's gut instinct. Do you think you have what it takes to come out on top?
@@ -69,4 +62,4 @@ cd simon-react
 npm install create-react-app
 npm run build
 ./deployReact.sh -k ~/keys/production.pem -h yourdomain.click -s simon
->>>>>>> 1769fc48434a2ad05b76868b96bb063601e7ee74
+(4/10) Some wonky stuff has been going in my coding land. I finally figured out MongoDB and am loving it's use case of querying results. So initially, I was trying to hard code the query selector when I had the answer all along. Instead of channging my endpoint service to take a parameter like Tesla stock, all I needed to do was to filter the results with the correct name. My mistake was only filtering the top 10 results, which only gave me the expensive stock options.
